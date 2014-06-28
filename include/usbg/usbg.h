@@ -888,6 +888,20 @@ extern usbg_config *usbg_get_next_config(usbg_config *c);
  */
 extern usbg_binding *usbg_get_next_binding(usbg_binding *b);
 
+/* Import / Export API */
+
+/**
+ * @brief Exports whole gadget to file
+ * @param g Pointer to gadget to be exported
+ * @param stream where gadget should be saved
+ */
+extern int usbg_export_gadget(usbg_gadget *g, FILE *stream);
+
+extern const char *usbg_ie_gadget_error_text(usbg_gadget *g);
+
+extern const char *usbg_ie_gadget_error_file(usbg_gadget *g);
+
+extern const char *usbg_ie_gadget_error_line(usbg_gadget *g);
 /**
  * @}
  */
